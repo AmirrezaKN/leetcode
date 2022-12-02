@@ -7,15 +7,10 @@ func groupAnagrams(strs []string) [][]string {
 		count := [26]int{}
 
 		for _, r := range str {
-			var aRune rune = rune('a')
-			count[r-aRune] += 1
+			count[r-rune('a')] += 1
 		}
+		result[count] = append(result[count], str)
 
-		if _, ok := result[count]; ok {
-			result[count] = append(result[count], str)
-		} else {
-			result[count] = []string{str}
-		}
 	}
 
 	output := make([][]string, 0)
