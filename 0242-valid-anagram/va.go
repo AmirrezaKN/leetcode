@@ -5,6 +5,10 @@ func isAnagram(s string, t string) bool {
 	secondValues := make(map[rune]int)
 	flag := true
 
+	if len(t) != len(s) {
+		return false
+	}
+
 	for _, rune := range s {
 		firstValues[rune] += 1
 	}
@@ -15,13 +19,6 @@ func isAnagram(s string, t string) bool {
 
 	for rune, value := range firstValues {
 		if value != secondValues[rune] {
-			flag = false
-			break
-		}
-	}
-
-	for rune, value := range secondValues {
-		if value != firstValues[rune] {
 			flag = false
 			break
 		}
