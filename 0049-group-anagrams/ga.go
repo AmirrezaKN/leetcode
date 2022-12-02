@@ -10,7 +10,6 @@ func groupAnagrams(strs []string) [][]string {
 			count[r-rune('a')] += 1
 		}
 		result[count] = append(result[count], str)
-
 	}
 
 	output := make([][]string, 0)
