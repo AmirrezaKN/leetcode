@@ -3,7 +3,7 @@ package validanagram
 import (
 	"testing"
 
-	"gotest.tools/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 func Test_isAnagram(t *testing.T) {

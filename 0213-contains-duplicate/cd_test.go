@@ -3,7 +3,7 @@ package containsduplicate
 import (
 	"testing"
 
-	"gotest.tools/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 func Test_containsDuplicate(t *testing.T) {
