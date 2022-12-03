@@ -7,14 +7,14 @@ func topKFrequent(nums []int, k int) []int {
 		counts[num] += 1
 	}
 
-	res := [10000][]int{}
+	res := make(map[int][]int)
 	for num, count := range counts {
 		res[count] = append(res[count], num)
 	}
 
 	output := []int{}
 	amount := 0
-	for i := 10000 - 1; i >= 0; i-- {
+	for i := len(nums); i >= 0; i-- {
 		if amount == k {
 			break
 		}
